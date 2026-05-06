@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Crimson Pro", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-primary: #ffffff;
+  --color-accent: #71717a;
+  --color-surface: #0e0e10;
+  --color-border: rgba(255, 255, 255, 0.05);
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-zinc-400 font-sans antialiased selection:bg-white selection:text-black;
+  }
+}
+
+@layer components {
+  .hardware-card {
+    @apply bg-surface border border-border rounded-xl p-6 relative overflow-hidden;
+  }
+
+  .mono-label {
+    @apply font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500 font-bold;
+  }
+
+  .dashed-border {
+    @apply border border-dashed border-zinc-800;
+  }
+}
